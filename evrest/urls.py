@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apirest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('productos/', views.productos_sinpk),
+    path('productos/<int:pk>/', views.productos_conpk),
+
 ]
